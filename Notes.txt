@@ -1,0 +1,82 @@
+TCP/Ip Socket programming 
+Topic 1-Basic of Networking ,Two types of connections 1- Direct connections
+2- Reverse connections , how to create a server inline by using 
+a service called Digital Ocean .
+Section 4 More practically  python code reverse shell 
+
+// Video  1 talks about Basic of Networking
+in this we learned about - Ip adresses 1 type 1- Static, Ping  , Dynamic Ip.
+Public Ip - Will be found by simple web search and priavte ip  use ipconfig 
+or ping for other websites ip 
+
+// Video 2 talks about Basic of Networking
+in this we learned about ports 
+netstat -a -b -n 
+Common Ports on the internet Http-80, https-443
+nntp -119 
+Ftp - 20
+SMTp -25
+pop3- 110 
+Imap4 -143
+telnet - 23
+Gopher -70
+
+
+// Video 3 Sockets 
+A Sockets is one endpoint of a two way communication link 
+between two programs running on the network . A socket is bound to a port number 
+so that the tcp layer can identify the applciation that 
+data is destined to be sent to . An endpoint is a combination of an ip adress and a port 
+number .
+
+socket = Ip address + Port Number 
+// Commands for socket in python 
+socket.socket();// creates a socket
+
+s.bind(host, port )// binding ip and port 
+
+s.send() // sends a message 
+s.listen( // listening 
+
+
+)
+s.recv() // reciveing the sockets 
+s.close()
+
+
+video 4 - direct connections and the reverse connections .
+
+
+How the connections Happens 1-Host/Ip address +port 
+2- Sockets  
+Problems with the direct connections 
+It is difficult to get Ip address .
+the ip is dyanamic in nature so its always changing 
+Even we could get regular updates to the dyanamic ip , the computer has bunch of firewalls 
+whcih makes it impossible to get to his computer
+
+Reverse connections
+reverse it from the customer computer to your computer , pythor file 
+or reverse shell 
+
+ 
+create a server to mitegate the dyanmic ip problem , it is by creating a server 
+and putting the ip of server in the server.py file and connect it to client.py 
+
+ip address of the server in the reverse shell file 
+
+// Video  5 
+Talks about creating a server on digital oceans 
+now what do you mean by server 
+
+remote computer when you can store files or hosy websites 
+it has a static ip 
+need internet to access a remote server
+
+i am not able to create a remote server beacuse i didn't have deit or paypall account 
+
+i use putty and puttygen 
+putty gen to create the private and public ssh tokens 
+and then i have to put them in digital ocean and pay the money 
+and i also have to use putty.exe and create and add  the ip 
+that is given to me by digital ocean 
