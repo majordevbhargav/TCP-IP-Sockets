@@ -1,81 +1,62 @@
 # TCP/IP Socket Programming
 
-A small Python networking project demonstrating TCP client/server communication, socket programming, and remote command execution in an explicitly authorized lab environment.
-
-## Overview
-
-The project contains a controller/server and a client that communicate over TCP. It is intended to demonstrate low-level networking concepts such as sockets, connection handling, command transport, and process output.
+A small Python networking project for learning **TCP sockets, client/server communication, connection handling, and data transport**.
 
 ## Architecture
 
 ```text
-Controller / Server
-       │
-       │ TCP connection
-       ▼
-Client / Target
-       │
-       ▼
-Local command execution
-       │
-       └── stdout / stderr
-             ↓
-          Server
+Server
+  |
+  | TCP connection
+  v
+Client
+  |
+  v
+Data / command workflow
+  |
+  v
+Response
 ```
 
-## Components
-
-- `server.py` listens for connections and provides the interactive controller side.
-- `client.py` connects to the configured server and handles the received command workflow.
-
-## Technology
-
-- Python 3.x
-- `socket`
-- `subprocess`
-
-## Lab Setup
-
-Use this project only on systems you own or are explicitly authorized to test.
-
-Configure the server address in the client according to your isolated lab environment, then start the listener before the client.
-
-```bash
-python server.py
-```
-
-In the authorized test environment:
-
-```bash
-python client.py
-```
-
-## Networking Concepts Demonstrated
+## Concepts Practiced
 
 - TCP sockets
 - Client/server architecture
-- Connection lifecycle
 - Port binding
-- Data transmission
-- Standard output and error handling
-- Basic command transport
+- Connection lifecycle
+- Sending and receiving data
+- Error handling
+- Process communication
 
-## Security Note
+## Technology
 
-This project can execute commands on the connected client and therefore has security implications. Do not deploy it against third-party systems, production endpoints, or networks without explicit authorization.
+- Python 3
+- `socket`
+- `subprocess`
+
+## Learning Purpose
+
+This is an intentionally small project. The goal is to understand what happens underneath higher-level networking frameworks before moving into larger network automation and security projects.
+
+It is part of my progression from **networking fundamentals → Python → automation → network security**.
+
+## Security
+
+The project can perform command execution in the connected client workflow. Use it only in systems and networks you own or are explicitly authorized to test.
+
+Do not deploy it against third-party or production systems.
 
 ## Future Direction
 
-- Explicit authentication
+- Authentication
 - Encrypted transport
-- Structured message protocol
-- Safer command allowlists
+- Structured protocol
+- Command allowlists
 - Connection logging
-- Educational packet-flow visualization
+- Packet-flow visualization
 
 ## Author
 
 **Dev Bhargav**
 
-- GitHub: https://github.com/majordevbhargav
-- LinkedIn: https://www.linkedin.com/in/devbhargav100
+[GitHub](https://github.com/majordevbhargav) · [LinkedIn](https://www.linkedin.com/in/devbhargav100)
